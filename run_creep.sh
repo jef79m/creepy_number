@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
-minute=`date | cut -d " " -f 5 | cut -c 4,5`
+minute=`date +%M`
 
 PLAYCOMMAND=aplay
 while true
 do
-    newminute=`date | cut -d " " -f 5 | cut -c 4,5`
+    newminute=`date +%M`
     if [ $newminute -gt $minute ]
     then
         minute=$newminute
